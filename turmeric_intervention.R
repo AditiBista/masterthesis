@@ -1,7 +1,7 @@
 library(decisionSupport)
 #install.packages("readr")
 library(readr)
-turmeric_interv <- read_csv("C:/Users/ASUS/Desktop/Aditi_master_thesis/turmeric_interv.csv")
+turmeric_interv <- read_csv("turmeric_interv.csv")
 #View(turmeric_interv)
 
 make_variables <- function(est,n=1) { 
@@ -9,7 +9,7 @@ make_variables <- function(est,n=1) {
   for (i in colnames(x)) assign(i,as.numeric(x[1,i]), envir=.GlobalEnv)
 }
 
-make_variables(as.estimate(Turmeric_cereal_interv))
+make_variables(as.estimate(turmeric_interv.csv))
 
 # The model ####
 
@@ -242,8 +242,7 @@ Turmeric_function <- function(x, varnames){
                          millet_production_cost +
                          maize_drying_cost +
                          millet_drying_cost
-                         maize_millet_production_cost +
-                         maize_millet_processing_cost
+                     
   # baseline costs with vv function
   total_cost_no <- vv(cereal_annual_costs, 
                       var_CV = CV_value, 
@@ -290,7 +289,7 @@ library(sf)
 # MC Simulation function
 
 mcSimulation_results <- decisionSupport::mcSimulation(
-  estimate = decisionSupport::estimate_read_csv("C:/Users/ASUS/Desktop/Aditi_master_thesis/turmeric_interv.csv"),
+  estimate = decisionSupport::estimate_read_csv("turmeric_interv.csv"),
   model_function = Turmeric_function,
   numberOfModelRuns = 1e3, #run 1,000 times
   functionSyntax = "plainNames"
@@ -329,10 +328,10 @@ plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "c
 pls_result <- plsr.mcSimulation(object = mcSimulation_results,
                                 resultName = names(mcSimulation_results$y)[3], ncomp = 1)
 #
-input_table <- read.csv("C:/Users/ASUS/Desktop/maize_turmeric/Turmeric_cereal_interv.csv")
+input_table <- read.csv("turmeric_interv.csv")
 #
 
-plot_pls(pls_result, input_table = Turmeric_cereal_interv, threshold = 0)
+plot_pls(pls_result, input_table = turmeric_interv, threshold = 0)
 #######################
 
 mcresults_table <- data.frame(mcSimulation_results$x,
