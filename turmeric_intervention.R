@@ -61,7 +61,6 @@ Turmeric_function <- function(x, varnames){
 #operation cost
   operation_cost <- 
   training_cost +
-  depreciation_cost +
   formation_cooperative_cost +
   land_acquisition_cost +
   end_Report_preparation_cost +
