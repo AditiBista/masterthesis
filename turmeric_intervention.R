@@ -3,7 +3,6 @@ library(decisionSupport)
 library(readr)
 turmeric_interv <- read_csv("turmeric_interv.csv")
 #View(turmeric_interv)
-
 make_variables <- function(est,n=1) { 
   x <- random(rho=est, n=n)
   for (i in colnames(x)) assign(i,as.numeric(x[1,i]), envir=.GlobalEnv)
@@ -19,188 +18,180 @@ Turmeric_function <- function(x, varnames){
   
   # Establishment costs  of project
   
+  government_provide_subsidy_yes_no <- chance_event(if_government_provide_subsidy,
+                                                 value_if = 1,
+                                                 value_if_not = 0)
+ irrigation_cost <-if(government_provide_subsidy_yes_no ==1){
+    irrigation_establishment_cost * subsidy_cost_government_paid
+  } else {
+  irrigation_establishment_cost
+  } 
+ 
+ #
   government_provide_land_yes_no <- chance_event(if_government_provide_land,
                                                  value_if = 1,
                                                  value_if_not = 0)
-  rent_cost <-if(government_provide_land_yes_no ==1){
-    land_rent_cost * land_cost_government_paid
+  storage_processing_cost <-if(government_provide_land_yes_no ==1){
+    estabishment_cost * land_cost_government_paid
   } else {
-    land_rent_cost
-  } 
+    estabishment_cost 
+  }
+ #
+ government_provide_subsidy_yes_no <- chance_event(if_government_provide_subsidy,
+                                                value_if = 1,
+                                                value_if_not = 0)
+ vehicle_purchase_cost <- if(government_provide_subsidy_yes_no ==1){
+   vehicle_cost * subsidy_cost_government_paid
+ } else {
+  vehicle_cost
+ }
   #
-  initial_costs <- processingcenter_cost +
-    advertisement_cost +
-    branding_cost +
+  initial_costs <- 
+    storage_processing_cost +
     vehicle_cost +
-    Connection_negotiation_cost +
     awareness_cost +
-    land_acquisition_cost +
-    turning_land_suitable_for_cultivation_cost +
-    production_input +
-    storing_storehouse_cost +
-    storing_unsold_turmeric +
-    rent_cost
+    guidance_report_preparation_cost +
+    branding_cost
 
   #establishment costs for project
-  establishment_cost_year_one <- initial_costs 
+  
   #establishment costs for women
-  establishment_cost_year_one_womenfarmers <- landlease_cost 
+  #establishment_cost_year_one_womenfarmers <- landlease_cost 
   
   
   # Maintenance costs ####
   
   # maintenance costs for project annual cost
-  
-  maintenance_cost_annual_project <- meeting_cost +
-    marketing_brand_cost +
-    distribution_cost +
-    Report_preparation_cost +
-    training_cost +
-    meeting_cost
-  
-  
+  operation_cost <- 
+  training_cost +
+  depreciation_cost +
+  formation_cooperative_cost +
+  land_acquisition_cost +
+  end_Report_preparation_cost +
+  turning_land_suitable_for_cultivation_cost +
+  depreciation_cost +
+  irrigation_cost +
+  production_input 
+   
   
   ## maintenance costs for women farmers
   ## annual_cost
-  maintenance_cost_annual_women <-
-    seed_women +
+communication_marketing_cost <-
+     Connection_negotiation_cost +
+      advertisement_cost +
+      meeting_cost 
+#
+  turmeric_production_cost <-
     organicmatter_fertiliser_women +
-    fuel_boiling_women + 
     Land_preparation_women +
     Farmyard_manure_application_women +  
     Mulch_collection_women +
     Plantation_cost_women +
     Weeding_cost_women +
-    Harvesting_women + 
-    Cleaning_and_grading_women +
-    Processing_boiling_women +
-    Drying_women +
-    marketing_women +
-    Transportation_cost_women +
-    Secondary_processing_women +
-    Transportation_cost_women_secondary +
-    Storage_cost_women +
-    Packaging_cost_women +
+    Harvesting_women 
+  
+  
+    #
+    turmeric_processing_cost <- fuel_boiling_women + 
+                                Cleaning_and_grading_women +
+                                Processing_boiling_women +
+                                Drying_women +
+                                Administration_operation_cost_women +
+                                certification_cost
+    #
+    turmeric_distribution_cost <- 
     Marketing_cost_women +
-    Administration_operation_cost_women 
-  #
-  total_maintenance_cost_annual_project <- maintenance_cost_annual_women +
-    maintenance_cost_annual_project
+    Primary_processing_women +
+    Secondary_processing_women +
+    Transportation_cost_women_distribution +
+    Storage_cost_women +
+    Packaging_cost_women 
+   
+   
+  #cost of 1 year
+    establishment_cost_year_one <- initial_costs
   
   
   # vv function for annual maintenance costs 
-  total_cost <- vv(total_maintenance_cost_annual_project, 
-                   var_CV = CV_value, 
-                   n = number_of_years, 
-                   relative_trend = inflation_rate) #percentage of increase each year
-  # vv function maintenance costs with womenfarmer
-  total_cost_womenfarmers <- vv(maintenance_cost_annual_women, 
-                                var_CV = CV_value, 
-                                n = number_of_years, 
-                                relative_trend = inflation_rate) #percentage of increase each year
-  
-  # Calculate management plus establishment costs in the first year
+    annual_cost <- operation_cost + 
+      communication_marketing_cost +
+      turmeric_production_cost + 
+      turmeric_processing_cost + 
+      turmeric_distribution_cost
+    #percentage of increase each year
+  # vv function maintenance costs with women farmer
+ 
  
   
-  total_cost[1] <- establishment_cost_year_one + 
-    maintenance_cost_annual_project + 
-    maintenance_cost_annual_women # the first is establishment_cost_year_one
+  #total_cost[1] <- establishment_cost_year_one 
+  #
+  total_cost_annual <- vv(annual_cost, 
+                   var_CV = CV_value, 
+                   n = number_of_years, 
+                   relative_trend = inflation_rate)
+  #
+  total_cost <- establishment_cost_year_one + total_cost_annual 
+  #
+  
+  # the first is establishment_cost_year_one
   # Calculate management plus establishment costs in the first year for women farmers
-  total_cost_womenfarmers[1] <- establishment_cost_year_one_womenfarmers + 
-    maintenance_cost_annual_women
-  
-  
-  # Risks ####
-  
-  turmeric_function_risk <-  min(if_community_likes, 
-                                 if_effective_manage,
-                                 if_operation_risk,
-                                 if_turmeric_yield_enough,
-                                 if_effective_training,
-                                 if_farmer_likes,
-                                 if_market_access,
-                                 if_government_support_market,
-                                 if_postharvest_losses,
-                                 if_government_provide_land)
+
   
   
   
-  turmeric_health_risk <- min(if_effective_manage,
-                              if_turmeric_yield_enough,
-                              if_turmeric_organic,
-                              if_effective_training)
+  # Add up all benefits #
   
-  
-  turmeric_postharvest_risk <- min(if_effective_manage,
-                                   if_operation_risk,
-                                   if_turmeric_yield_enough,
-                                   if_effective_training,
-                                   if_farmer_likes,
-                                   if_postharvest_losses) 
-  
-  
-  #health benefits from organic turmeric
-  medicinal_related_value <- vv(organic_hospitalsaving_value,
-                                CV_value,
-                                number_of_years,
-                                relative_trend = inflation_rate) * turmeric_health_risk
-  
-  
-  
-  #women empowerment benefit
-  women_empowernment_related_value <- vv(women_empowernment_value, 
-                                         CV_value, 
-                                         number_of_years, 
-                                         relative_trend = inflation_rate) * turmeric_function_risk
-  
-  
-  # Add up all benefits ####
-  
-  
-  turmeric_benefit <- Total_turmeric_yield * recovery_rate * Turmeric_price
+  turmeric_yield <- Total_turmeric_yield  * (1-turmeric_risk * yield_turmeric_risk)
   #
-  postharvest_loss <- postharvest_losses_primary_processing_value +
-                      postharvest_losses_secondary_processing +
-                      postharvest_losses_trading 
+  
+  turmeric_benefit <- turmeric_yield * recovery_rate * Turmeric_price
+  #postharvest_loss <- postharvest_losses_primary_processing_value +
+                      #postharvest_losses_secondary_processing +
+                      #postharvest_losses_trading 
   #
-  postharvest_loss_value <- vv(postharvest_loss, 
-                               var_CV = CV_value, 
-                               n = number_of_years, 
-                               relative_trend = inflation_rate) * turmeric_postharvest_risk
+  #postharvest_loss_value <- vv(postharvest_loss, 
+                               #var_CV = CV_value, 
+                               #n = number_of_years, 
+                               #relative_trend = inflation_rate) * turmeric_postharvest_risk
   #
-  turmeric_benefit_risk <- turmeric_benefit - (if_turmeric_risk * turmeric_benefit)
+  #turmeric_benefit_risk <- turmeric_benefit - (if_turmeric_risk * turmeric_benefit)
   #
-  turmeric_revenue <- vv(turmeric_benefit_risk, 
+  turmeric_revenue <- vv(turmeric_benefit, 
                          CV_value, 
                          number_of_years, 
-                         relative_trend = inflation_rate) * turmeric_function_risk
+                         relative_trend = inflation_rate) 
   #
-  total_benefit <- (women_empowernment_related_value + 
-                      turmeric_revenue +
-                      medicinal_related_value) - 
-    postharvest_loss_value
+  #total_benefit <- (women_empowernment_related_value + 
+                      #turmeric_revenue +
+                     # medicinal_related_value) - 
+   # postharvest_loss_value
   # 
-  total_benefit_womenfarmers <- (women_empowernment_related_value + 
-                                   turmeric_revenue +
-                                   medicinal_related_value) - 
+  Turmeric_interv_result <- turmeric_revenue - total_cost
+  
     #
     
-    postharvest_loss_value 
+    #postharvest_loss_value 
   
   # Final result of the costs and benefits of womenfarmers
-  womenfarmers_result <-  total_benefit_womenfarmers - total_cost_womenfarmers
+  #womenfarmers_result <-  total_benefit_womenfarmers - total_cost_womenfarmers
   
   # Final result of the costs and benefits 
-  Turmeric_interv_result <- total_benefit - total_cost
+  #Turmeric_interv_result <- total_benefit - total_cost
   
-  #Cereal maize and wheat benefit
+  #Cereal maize and milllet benefit
+
+
   #
-  animalfeed_benefit <- animalfeed_harvest * animalfeed_price
-  # 
+  Total_maize_yield <- maize_harvest * (1-maize_risk * yield_maize_risk)
+  maize_benefit <- Total_maize_yield * maize_price
+  #
+  Total_animalfeed_yield <- animalfeed_harvest * (1-maize_risk * yield_maize_risk)
+  animalfeed_benefit <- Total_animalfeed_yield * animalfeed_price 
+  #
+  Total_firewood_yield <- firewood_harvest * (1-maize_risk * yield_maize_risk)
   firewood_benefit <- firewood_harvest * firewood_price
-  #                
-  maize_benefit <- maize_harvest * maize_price
   #
+  Total_millet_yield <- millet_harvest * (1-millet_risk * yield_millet_risk)
   millet_benefit <- millet_harvest * millet_price
   #
   cereal_benefit <- maize_benefit +
@@ -208,40 +199,38 @@ Turmeric_function <- function(x, varnames){
     animalfeed_benefit + 
     firewood_benefit
   #
-  cereal_benefit_risk <- cereal_benefit - (cereal_risk * cereal_benefit)
-  #
-  cereal_revenue <- vv(cereal_benefit_risk, 
+  cereal_revenue <- vv(cereal_benefit, 
                        CV_value, 
                        number_of_years, 
                        relative_trend = inflation_rate)
   #
-  value_of_cereal_land_use <- cereal_revenue
+  #value_of_cereal_land_use <- cereal_revenue
   #
-  land_used_yes_no <- chance_event(if_not_fallow, # some chance that the land will be fallow
-                                   value_if = 1, 
-                                   value_if_not = 0)
+  #land_used_yes_no <- chance_event(if_not_fallow, # some chance that the land will be fallow
+                                   #value_if = 1, 
+                                   #value_if_not = 0)
   
-  cereal_value <- if (land_used_yes_no == 1) {
-    vv(value_of_grass_land_use,
-       CV_value, 
-       number_of_years, 
-       relative_trend = inflation_rate) 
-  } else {
-    vv(value_of_cereal_land_use,
-       CV_value, 
-       number_of_years, 
-       relative_trend = inflation_rate)
-  }
+ # cereal_value <- if (land_used_yes_no == 1) {
+    #vv(value_of_grass_land_use,
+       #CV_value, 
+       #number_of_years, 
+       #relative_trend = inflation_rate) 
+  #} else {
+    #vv(value_of_cereal_land_use,
+       #CV_value, 
+       #number_of_years, 
+       #relative_trend = inflation_rate)
+  #}
   
   
-  total_benefit_no <- cereal_value 
+  total_benefit_no <- cereal_revenue 
   
   #
   # baseline costs 
   cereal_annual_costs <- maize_production_cost +
                          millet_production_cost +
-                         maize_drying_cost +
-                         millet_drying_cost
+                         maize_processing_cost +
+                         millet_processing_cost
                      
   # baseline costs with vv function
   total_cost_no <- vv(cereal_annual_costs, 
@@ -258,11 +247,6 @@ Turmeric_function <- function(x, varnames){
     discount(x = Turmeric_interv_result, 
              discount_rate = discount_rate, 
              calculate_NPV = TRUE)
-  #
-  NPV_womenfarmers <-
-    discount(x = womenfarmers_result, 
-             discount_rate = discount_rate, 
-             calculate_NPV = TRUE)
   
   
   # NPV no intervention ####
@@ -274,13 +258,9 @@ Turmeric_function <- function(x, varnames){
   return(list(
     Turmeric_interv_result = NPV_interv,
     no_intervention_result = NPV_no_interv,
-    womenfarmers_result = NPV_womenfarmers,
     NPV_decision = NPV_interv - NPV_no_interv,
-    NPV_decision_womenfarmers = NPV_womenfarmers - NPV_no_interv,  
     total_costs = sum(total_cost),
-    total_costs_womenfarmers = sum(total_cost_womenfarmers),
-    Cashflow_decision = Turmeric_interv_result,
-    cashflow_decision_women = womenfarmers_result))
+    Cashflow_decision = Turmeric_interv_result))
   
 }
 
@@ -298,32 +278,27 @@ mcSimulation_results <- decisionSupport::mcSimulation(
 #
 decisionSupport::plot_distributions(
   mcSimulation_object = mcSimulation_results, 
-  vars = c("NPV_decision","NPV_decision_womenfarmers"),
+  vars = c("NPV_decision"),
   method = 'smooth_simple_overlay',
-  colors = c("#0000FF","green"),
+  colors = c("#0000FF"),
   base_size = 6)
 
 #
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = c("Turmeric_interv_result",
                                              "no_intervention_result",
-                                             "NPV_decision",
-                                             "NPV_decision_womenfarmers",
-                                             "womenfarmers_result"),
-                                    colors = c("#0000FF","brown","green","pink","yellow"),
+                                             "NPV_decision"),
+                                    colors = c("#0000FF","brown","green"),
                                     method = 'boxplot',
                                     base_size = 10)
 #
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = "NPV_decision",
                                     method = 'boxplot_density')
-#
-decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
-                                    vars = "NPV_decision_womenfarmers",
-                                    method = 'boxplot_density')
+
 #
 plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "Cashflow_decision")
-plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "cashflow_decision_women")
+
 #
 pls_result <- plsr.mcSimulation(object = mcSimulation_results,
                                 resultName = names(mcSimulation_results$y)[3], ncomp = 1)
@@ -332,23 +307,14 @@ input_table <- read.csv("turmeric_interv.csv")
 #
 
 plot_pls(pls_result, input_table = turmeric_interv, threshold = 0)
-#######################
+#
 
 mcresults_table <- data.frame(mcSimulation_results$x,
-                              mcSimulation_results$y[, c("Turmeric_interv_result", "no_intervention_result", "NPV_decision","womenfarmers_result" )])
+                              mcSimulation_results$y[, c("Turmeric_interv_result", "no_intervention_result", "NPV_decision" )])
 evpi<- multi_EVPI(mc= mcresults_table,
                   first_out_var = "NPV_decision", write_table = FALSE)
 plot_evpi<-plot_evpi(evpi,
                      decision_vars = "NPV_decision",
-                     new_name= "Turmeric and Maize",
-                     unit= "USD",
-                     bar_color= "yellow4",
-                     base_size=12)
-#wmenfarmers
-evpi<- multi_EVPI(mc= mcresults_table,
-                  first_out_var = "NPV_decision_womenfarmers", write_table = FALSE)
-plot_evpi<-plot_evpi(evpi,
-                     decision_vars = "NPV_decision_womenfarmers",
                      new_name= "Turmeric and Maize",
                      unit= "USD",
                      bar_color= "yellow4",
