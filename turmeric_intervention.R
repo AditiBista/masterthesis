@@ -142,8 +142,6 @@ communication_marketing_cost <-
   Turmeric_interv_result <- turmeric_revenue - total_cost
   
     #
-    
-  
   #The cost and benefit of existing cropping system maize and millet
   #Cereal maize and millet benefit
  #Total maize benefit with risk
