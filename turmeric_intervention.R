@@ -128,9 +128,12 @@ communication_marketing_cost <-
   # Turmeric revenue by selling turmeric powder
   #Turmeric yield with turmeric risk
   turmeric_yield <- Total_turmeric_yield  * (1-turmeric_risk * yield_turmeric_risk)
+ 
+  #Turmeric price with market risk
+  Turmeric_price_risk <- Turmeric_price * (1-market_risk * price_market_risk)
   
   #Multiplying the turmeric powder with turmeric price
-  turmeric_benefit <- turmeric_yield * recovery_rate * Turmeric_price
+  turmeric_benefit <- turmeric_yield * recovery_rate * Turmeric_price_risk
 
   #turmeric benefit with vv function
   turmeric_revenue <- vv(turmeric_benefit, 

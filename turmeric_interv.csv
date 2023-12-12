@@ -51,8 +51,8 @@ maize_harvest,1110,,1230,posnorm,maize harvest kg per hectar per year
 maize_risk,0.5,,0.7,tnorm_0_1,chance of occuring maize risk % per year
 yield_maize_risk,0.4,,0.6,tnorm_0_1,yield reduction due to maize risk % per year
 animalfeed_price,0.0075,,0.02,posnorm,Price of animal feed per kg (USD)
-maize_price,0.2,,0.3,posnorm,Price of maize per kg (USD) 		
-firewood_price,0.023,,0.03,posnorm,Price of firewood per kg (USD) 		
+maize_price,0.2,,0.3,posnorm,"Price of maize per kg (USD) 		"
+firewood_price,0.023,,0.03,posnorm,"Price of firewood per kg (USD) 		"
 millet_price,0.2,,0.3,posnorm,Price of millet per kg (USD)
 animalfeed_harvest,22000,,35000,posnorm,animalfeed harvest kg per hectar per year
 firewood_harvest,1500,,2500,posnorm,firewood harvest kg per hectar per year
@@ -63,5 +63,6 @@ maize_production_cost,410,,440,posnorm,Production cost of maize in (USD/year/ha)
 millet_production_cost,160,,185,posnorm,Production cost of maize(USD/year/ha)
 maize_processing_cost,41,,57,posnorm,Processing cost of maize for give production (USD/year/ha)
 millet_processing_cost,41,,58,posnorm,Processing cost of millet for given production (USD/year/ha)
-Total_turmeric_yield,19000,,25000,posnorm,Total turmeric yield in kg per ha per year
-certification_cost,539.5,,1124,posnorm,certification cost per hectar per year(USD/year/ha)
+Total_turmeric_yield,11430,,13170,posnorm,Total turmeric yield in kg per ha per year
+market_risk,0.3,,0.5,tnorm_0_1,chance of market risk % per year
+price_market_risk,0.15,,0.4,tnorm_0_1,% price reduce due to market risk per year 
