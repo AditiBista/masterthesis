@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2023-12-13T12:10:29.672Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="Bxf6VKc0iucsIfV7c-Qu" version="22.1.8" type="github">
-  <diagram id="2O41qx2Zen-QbjkQS9YQ" name="Page-1">
+<mxfile host="app.diagrams.net" modified="2023-12-13T15:20:14.173Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="FvrEwDR__BEieBT4v4Aj" version="22.1.8" type="github">
+  <diagram id="fdZuWNpxMua1UBkGGr4U" name="Page-1">
     <mxGraphModel dx="104" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -96,9 +96,9 @@
         <mxCell id="g0W_0NXHWMT82P0ljdfY-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="qbSNNWnGffYOng-eK7Mu-59" target="Bm_euUfFgAgu9yLUH32F-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qbSNNWnGffYOng-eK7Mu-59" value="turmeric &amp;nbsp;benefit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1" collapsed="1">
-          <mxGeometry x="1048" y="354" width="130" height="30" as="geometry">
-            <mxRectangle x="1048" y="354" width="140" height="90" as="alternateBounds" />
+        <mxCell id="qbSNNWnGffYOng-eK7Mu-59" value="turmeric &amp;nbsp;benefit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="1048" y="354" width="140" height="90" as="geometry">
+            <mxRectangle x="1048" y="354" width="130" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="qbSNNWnGffYOng-eK7Mu-60" value="Turmeric yield" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="qbSNNWnGffYOng-eK7Mu-59" vertex="1">
@@ -110,9 +110,9 @@
         <mxCell id="g0W_0NXHWMT82P0ljdfY-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="P7z4gR5DvrRTQaax9_9S-4" target="Bm_euUfFgAgu9yLUH32F-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="P7z4gR5DvrRTQaax9_9S-4" value="cereal maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1" collapsed="1">
-          <mxGeometry x="1068" y="498" width="170" height="30" as="geometry">
-            <mxRectangle x="1068" y="498" width="140" height="90" as="alternateBounds" />
+        <mxCell id="P7z4gR5DvrRTQaax9_9S-4" value="cereal maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="1068" y="498" width="140" height="90" as="geometry">
+            <mxRectangle x="1068" y="498" width="170" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="P7z4gR5DvrRTQaax9_9S-5" value="FYM collection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P7z4gR5DvrRTQaax9_9S-4" vertex="1">
@@ -203,9 +203,9 @@
         <mxCell id="g0W_0NXHWMT82P0ljdfY-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="d5tyBhBD4ZNlllIkALd0-29" target="Bm_euUfFgAgu9yLUH32F-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-29" value="cereal Post harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1" collapsed="1">
-          <mxGeometry x="870" y="540" width="165" height="30" as="geometry">
-            <mxRectangle x="870" y="540" width="140" height="70" as="alternateBounds" />
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-29" value="cereal Post harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="870" y="540" width="140" height="70" as="geometry">
+            <mxRectangle x="870" y="540" width="165" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-30" value="cleaning" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="d5tyBhBD4ZNlllIkALd0-29" vertex="1">
@@ -260,9 +260,9 @@
         <mxCell id="g0W_0NXHWMT82P0ljdfY-46" value="Land preparation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="g0W_0NXHWMT82P0ljdfY-41" vertex="1">
           <mxGeometry y="50" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="g0W_0NXHWMT82P0ljdfY-62" value="turmeric risk" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1" collapsed="1">
-          <mxGeometry x="860" y="374" width="110" height="30" as="geometry">
-            <mxRectangle x="860" y="374" width="140" height="70" as="alternateBounds" />
+        <mxCell id="g0W_0NXHWMT82P0ljdfY-62" value="turmeric risk" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="860" y="374" width="140" height="70" as="geometry">
+            <mxRectangle x="860" y="374" width="110" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-63" value="extreme climatic events" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="g0W_0NXHWMT82P0ljdfY-62" vertex="1">
