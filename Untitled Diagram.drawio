@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2023-12-13T16:02:46.841Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="fpjV5YD6F9ASo2wQDFf5" version="22.1.8" type="github">
-  <diagram id="5McHi9BxwL8mM6UUfLl7" name="Page-1">
+<mxfile host="app.diagrams.net" modified="2023-12-13T16:08:05.823Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="LjLwLI9Qok4lGZd3aMP8" version="22.1.8" type="github">
+  <diagram id="2HYr-oj5OHVptJeIMlU6" name="Page-1">
     <mxGraphModel dx="104" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -38,7 +38,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Bm_euUfFgAgu9yLUH32F-6" value="Total costs(usd/hac/year)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
-          <mxGeometry x="1285" y="523" width="120" height="47" as="geometry" />
+          <mxGeometry x="1285" y="517" width="120" height="47" as="geometry" />
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Bm_euUfFgAgu9yLUH32F-8" target="vRBI4vWx7eo8pq1-qWPK-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -62,7 +62,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Bm_euUfFgAgu9yLUH32F-40" value="Revenue(usd/hac/year)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
-          <mxGeometry x="1300" y="604" width="130" height="37" as="geometry" />
+          <mxGeometry x="1300" y="621" width="130" height="37" as="geometry" />
         </mxCell>
         <mxCell id="qbSNNWnGffYOng-eK7Mu-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -74,7 +74,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qbSNNWnGffYOng-eK7Mu-23" value="cereal benefit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
-          <mxGeometry x="1209" y="672.5" width="140" height="110" as="geometry">
+          <mxGeometry x="1209" y="693.5" width="140" height="110" as="geometry">
             <mxRectangle x="951" y="646.5" width="80" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -131,12 +131,12 @@
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1178" y="620" as="sourcePoint" />
-            <mxPoint x="1290" y="560" as="targetPoint" />
+            <mxPoint x="1209" y="620" as="sourcePoint" />
+            <mxPoint x="1321" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="P7z4gR5DvrRTQaax9_9S-9" value="cereal harvesting cost(usd/hac/year)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
-          <mxGeometry x="1099" y="600" width="140" height="70" as="geometry">
+          <mxGeometry x="1099" y="612" width="140" height="70" as="geometry">
             <mxRectangle x="1073" y="600" width="160" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -177,16 +177,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-7" value="Turmeric &amp;nbsp;implementation cost(use/hac/year)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
-          <mxGeometry x="1387" y="176" width="136.5" height="70" as="geometry">
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-7" value="Turmeric &amp;nbsp;implementation cost(use/hac/year)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="1387" y="160" width="136.5" height="80" as="geometry">
             <mxRectangle x="1380" y="150" width="193" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-39" value="Seed &amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="d5tyBhBD4ZNlllIkALd0-7" vertex="1">
-          <mxGeometry y="30" width="136.5" height="20" as="geometry" />
+          <mxGeometry y="40" width="136.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-9" value="Land preparation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="d5tyBhBD4ZNlllIkALd0-7" vertex="1">
-          <mxGeometry y="50" width="136.5" height="20" as="geometry" />
+          <mxGeometry y="60" width="136.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-12" value="Turmeric maintenance cost(usd/hac/year)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
           <mxGeometry x="930" y="99" width="140" height="110" as="geometry">
@@ -205,11 +205,8 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-23" value="Mulch collection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="d5tyBhBD4ZNlllIkALd0-12" vertex="1">
           <mxGeometry y="90" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="g0W_0NXHWMT82P0ljdfY-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="d5tyBhBD4ZNlllIkALd0-29" target="Bm_euUfFgAgu9yLUH32F-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-29" value="cereal Post harvesting cost(usd/hac/year)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
-          <mxGeometry x="870" y="540" width="140" height="70" as="geometry">
+          <mxGeometry x="896" y="540" width="140" height="70" as="geometry">
             <mxRectangle x="870" y="540" width="165" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -249,7 +246,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-32" value="crop price(usd/kg)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
-          <mxGeometry x="1410" y="686.5" width="120" height="30" as="geometry" />
+          <mxGeometry x="1410" y="704.5" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" parent="1" source="g0W_0NXHWMT82P0ljdfY-41" target="Bm_euUfFgAgu9yLUH32F-6" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -327,6 +324,22 @@
         </mxCell>
         <mxCell id="g0W_0NXHWMT82P0ljdfY-100" value="red arrow=negative" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="g0W_0NXHWMT82P0ljdfY-85" vertex="1">
           <mxGeometry y="150" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bgvhsF7kkHiN2BEWoTIx-1" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1310" y="430" as="sourcePoint" />
+            <mxPoint x="1360" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bgvhsF7kkHiN2BEWoTIx-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="595" as="sourcePoint" />
+            <mxPoint x="1310" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1035" y="596" />
+              <mxPoint x="1311" y="596" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
