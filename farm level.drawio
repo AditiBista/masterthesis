@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-13T07:34:27.424Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="LtNhoXfTDDckj4Aqb7xD" version="22.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-13T07:42:21.403Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15" etag="0WpcRmbhsC803slv3PuW" version="22.1.8" type="github">
   <diagram id="RfpzjJQe_nUU93gx4Dxn" name="Page-1">
     <mxGraphModel dx="954" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -263,7 +263,7 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qbSNNWnGffYOng-eK7Mu-59" target="d5tyBhBD4ZNlllIkALd0-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qbSNNWnGffYOng-eK7Mu-59" value="cereal implementation cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="qbSNNWnGffYOng-eK7Mu-59" value="cereal implementation cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
           <mxGeometry x="1063" y="740" width="140" height="120" as="geometry" />
         </mxCell>
         <mxCell id="qbSNNWnGffYOng-eK7Mu-60" value="Seed &amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="qbSNNWnGffYOng-eK7Mu-59" vertex="1">
@@ -287,7 +287,7 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="P7z4gR5DvrRTQaax9_9S-4" target="d5tyBhBD4ZNlllIkALd0-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="P7z4gR5DvrRTQaax9_9S-4" value="cereal maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="P7z4gR5DvrRTQaax9_9S-4" value="cereal maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
           <mxGeometry x="1263" y="710" width="140" height="120" as="geometry" />
         </mxCell>
         <mxCell id="P7z4gR5DvrRTQaax9_9S-5" value="FYM collection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P7z4gR5DvrRTQaax9_9S-4" vertex="1">
@@ -302,16 +302,19 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="P7z4gR5DvrRTQaax9_9S-9" target="d5tyBhBD4ZNlllIkALd0-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="P7z4gR5DvrRTQaax9_9S-9" value="cereal harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="P7z4gR5DvrRTQaax9_9S-9" value="cereal harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
           <mxGeometry x="1426" y="790" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="P7z4gR5DvrRTQaax9_9S-10" value="Harvesting" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P7z4gR5DvrRTQaax9_9S-9" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="P7z4gR5DvrRTQaax9_9S-11" value="threshing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P7z4gR5DvrRTQaax9_9S-9" vertex="1">
+        <mxCell id="P7z4gR5DvrRTQaax9_9S-11" value="shelling/thresing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="P7z4gR5DvrRTQaax9_9S-9" vertex="1">
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-3" value="Turmeric Post harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d5tyBhBD4ZNlllIkALd0-3" target="d5tyBhBD4ZNlllIkALd0-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-3" value="Turmeric Post harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="860" y="785" width="140" height="120" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-4" value="storage cost" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-3">
@@ -323,7 +326,7 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-6" value="marketing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-3">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-7" value="Turmeric &amp;nbsp;implementation cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-7" value="Turmeric &amp;nbsp;implementation cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="1063" y="940" width="140" height="120" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-8" value="Seed &amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-7">
@@ -335,7 +338,7 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-10" value="land lease" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-7">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-12" value="Turmeric maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-12" value="Turmeric maintenance cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="1263" y="910" width="140" height="240" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-13" value="FYM &lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-12">
@@ -359,7 +362,7 @@
         <mxCell id="d5tyBhBD4ZNlllIkALd0-26" value="Grinding" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-12">
           <mxGeometry y="210" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="d5tyBhBD4ZNlllIkALd0-17" value="Turmeric harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-17" value="Turmeric harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
           <mxGeometry x="1426" y="960" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-18" value="Extracting turmeric" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-17">
@@ -373,6 +376,15 @@
         </mxCell>
         <mxCell id="d5tyBhBD4ZNlllIkALd0-22" value="gathering" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-17">
           <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-29" value="cereal Post harvesting cost" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="860" y="985" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-30" value="cleaning" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-29">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="d5tyBhBD4ZNlllIkALd0-31" value="treatment" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="d5tyBhBD4ZNlllIkALd0-29">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
