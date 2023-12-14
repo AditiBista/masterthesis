@@ -13,182 +13,152 @@ make_variables(as.estimate(turmeric_interv))
 # The model ####
 
 Turmeric_function <- function(x, varnames){
-  
-  # Costs####
-  
-  #If government provides 50% subsidy on the establishment of irrigation cost
-  
-  government_provide_subsidy_yes_no <- chance_event(if_government_provide_subsidy,
-                                                 value_if = 1,
-                                                 value_if_not = 0)
- irrigation_cost <-if(government_provide_subsidy_yes_no ==1){
-    irrigation_establishment_cost * subsidy_cost_government_paid
-  } else {
-  irrigation_establishment_cost
-  } 
  
- # If Government provides land for the establishment of storage and processing center 
- #which is 20-25% of the total establishment cost
-  government_provide_land_yes_no <- chance_event(if_government_provide_land,
-                                                 value_if = 1,
-                                                 value_if_not = 0)
-  storage_processing_cost <-if(government_provide_land_yes_no ==1){
-    estabishment_cost * land_cost_government_paid
-  } else {
-    estabishment_cost 
-  }
-  #If government provides 50% subsidy on the purchase of farm vehicle for transportation
- government_provide_subsidy_yes_no <- chance_event(if_government_provide_subsidy,
-                                                value_if = 1,
-                                                value_if_not = 0)
- vehicle_purchase_cost <- if(government_provide_subsidy_yes_no ==1){
-   vehicle_cost * subsidy_cost_government_paid
- } else {
-  vehicle_cost
- }
- 
-  #first year establishment cost for the project
-  initial_costs <- 
-    storage_processing_cost +
-    vehicle_cost +
-    awareness_cost +
-    guidance_report_preparation_cost +
-    branding_cost
+  #implementation cost for the turmeric farmer
+  turmeric_implementation_costs <- 
+  Land_preparation_cost_turmeric +
+   Seed_turmeric 
+  
+# Maintenance costs for the turmeric farmer
+  turmeric_maintenance_cost <- 
+    FYM_cost_turmeric +
+    Weeding_cost_turmeric+
+    Plantation_cost_turmeric +
+  Mulch_collection_cost_turmeric
+
+#harvesting cost of turmeric farmer
+ Turmeric_harvesting_cost <- 
+   Extracting_turmeric_costs +
+ Removing_roots_costs +
+ sorting_seed_costs +
+ gathering_costs
+
+#post harvesting cost of turmeric farmer
+Turmeric_postharvesting_cost <-   
+boiling_costs_turmeric +
+drying_costs_turmeric +
+grinding_costs_turmeric +
+packaging_costs_turmeric +
+storage_costs_turmeric
+
+# first year cost for turmeric farmer
+turmeric_initial_cost <- turmeric_implementation_costs
+#Total annual cost for turmeric farmer
+turmeric_cost <- 
+Turmeric_postharvesting_cost +  
+Turmeric_harvesting_cost + 
+turmeric_maintenance_cost 
+#turmeric annual cost with vv function
+total_cost_turmeric <- vv(turmeric_cost, 
+                        var_CV = CV_value, 
+                        n = number_of_years, 
+                        relative_trend = inflation_rate) 
+#sum of total cost for turmeric farmer
+total_cost <- total_cost_turmeric + turmeric_initial_cost
+# Benefit of turmeric
+#Turmeric yield with turmeric risk
+
+turmeric_yield <- Total_turmeric_yield * (1-extream_climatic_events_turmeric * yield_climate_risk_turmeric) *
+                  (1-disease_pests_turmeric * yield_disease_risk_turmeric)
+##Turmeric revenue by selling turmeric powder
+
+turmeric_revenue <- (turmeric_yield * Turmeric_price) +
+                     Improve_livelihood
+#total benefit of turmeric with vv function
+total_benefit <- vv(turmeric_revenue, 
+                     CV_value, 
+                     number_of_years, 
+                     relative_trend = inflation_rate) 
+
+# turmeric result
+Turmeric_interv_result <- total_benefit - total_cost
+#implementation cost for the cereal farmer, initial cost
+cereal_implementation_costs <- 
+Seed_cereal +
+Land_preparation_cost_cereal
+
+# Maintenance costs for the cereal farmer
+cereal_maintenance_cost <- 
+FYM_cost_cereal +
+Weeding_cost_cereal +
+Plantation_cost_cereal 
 
 
-  
-  # Maintenance costs of project including depreciation cost for farm vehicle, storage and processing machine and minitiller
-#operation cost
-  operation_cost <- 
-  training_cost +
-  formation_cooperative_cost +
-  land_acquisition_cost +
-  end_Report_preparation_cost +
-  turning_land_suitable_for_cultivation_cost +
-  depreciation_cost +
-  irrigation_cost +
-  production_input 
+#harvesting cost of cereal
+cereal_harvesting_cost <- 
+cutting_cereal_costs +
+shellling_thresing_cereal_costs
+
+#post harvesting cost of cereal
+cereal_postharvesting_cost <-   
+cleaning_costs_cereal +
+storage_costs_cereal
+
+#cereal initial cost
+cereal_initial_cost <- cereal_implementation_costs 
+#Total cost
+cereal_cost <- 
+cereal_maintenance_cost +  
+cereal_harvesting_cost + 
+cereal_postharvesting_cost 
+
+# baseline costs with vv function
+total_cost_cereal <- vv(cereal_cost, 
+                    var_CV = CV_value, 
+                    n = number_of_years, 
+                    relative_trend = inflation_rate)  
+#Total cost for cereal farmer  
+total_cost_no <- total_cost_cereal + cereal_initial_cost 
    
-  
- # communication_marketing_cost
-communication_marketing_cost <-
-      Connection_negotiation_cost +
-      advertisement_cost +
-      meeting_cost 
 
-#production, processing and distribution cost for women farmer
-#turmeric_production_cost
-  turmeric_production_cost <-
-    organicmatter_fertiliser_women +
-    Land_preparation_women +
-    Farmyard_manure_application_women +  
-    Mulch_collection_women +
-    Plantation_cost_women +
-    Weeding_cost_women +
-    Harvesting_women 
-  
-  
-#turmeric_processing_cost
-    turmeric_processing_cost <- fuel_boiling_women + 
-                                Cleaning_and_grading_women +
-                                Processing_boiling_women +
-                                Drying_women +
-                                Administration_operation_cost_women +
-                                certification_cost
-    
-    #turmeric_distribution_cost
-    turmeric_distribution_cost <- 
-    Marketing_cost_women +
-    Primary_processing_women +
-    Secondary_processing_women +
-    Transportation_cost_women_distribution +
-    Storage_cost_women +
-    Packaging_cost_women 
-   
-   
-  #cost of 1 year for project
-    establishment_cost_year_one <- initial_costs
-  
-  
-  # total annual  costs 
-    annual_cost <- operation_cost + 
-      communication_marketing_cost +
-      turmeric_production_cost + 
-      turmeric_processing_cost + 
-      turmeric_distribution_cost
-    # vv function for annual  costs 
-  total_cost_annual <- vv(annual_cost, 
-                   var_CV = CV_value, 
-                   n = number_of_years, 
-                   relative_trend = inflation_rate)
-  # sum total cost including first year and annual cost with vv function
-  total_cost <- establishment_cost_year_one + total_cost_annual 
- 
-  
-  # Turmeric revenue by selling turmeric powder
-  #Turmeric yield with turmeric risk
-  turmeric_yield <- Total_turmeric_yield  * (1-turmeric_risk * yield_turmeric_risk)
- 
-  #Turmeric price with market risk
-  Turmeric_price_risk <- Turmeric_price * (1-market_risk * price_market_risk)
-  
-  #Multiplying the turmeric powder with turmeric price
-  turmeric_benefit <- turmeric_yield * recovery_rate * Turmeric_price_risk
+  #maize benefit
+Total_maize_yield <- maize_harvest * (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
+                  (1-extream_climatic_events_maize * yield_climate_maize_risk) *
+                  (1-wild_animal_attack_maize * yield_wild_animal_maize_risk)
+maize_benefit <- maize_price * Total_maize_yield 
+#millet benefit
+Total_millet_yield <- millet_harvest * (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
+  (1-extream_climatic_events_millet * yield_climate_millet_risk) *
+  (1-wild_animal_attack_millet * yield_wild_animal_millet_risk)
+millet_benefit <- Total_millet_yield * millet_price
 
-  #turmeric benefit with vv function
-  turmeric_revenue <- vv(turmeric_benefit, 
+#Total maizestem feed benefit for animal
+Total_maizestem_yield <- maizestem_harvest * (1-extream_climatic_events_maize * yield_climate_maize_risk) *
+  (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) 
+maizestem_benefit <- Total_maizestem_yield * maizestem_price 
+
+#millet straw benefit
+Total_milletstraw_yield <- milletstraw_harvest * (1-extream_climatic_events_millet * yield_climate_millet_risk) *
+  (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) 
+milletstraw_benefit <- Total_milletstraw_yield * milletstraw_price 
+
+#Total firewood benefit as remaining part of  maize after extraction of maize grain(cob) is used for firewood benefit
+Total_firewood_yield <- firewood_harvest * (1-maize_risk * yield_maize_risk)
+firewood_benefit <- firewood_harvest * firewood_price
+
+#millet benefit
+cereal_benefit <- millet_benefit + 
+                   food_access + 
+                   maize_benefit +
+                   maizestem_benefit +
+                   milletstraw_benefit +
+                   firewood_benefit 
+#The cost and benefit of existing cropping system maize and millet
+#Cereal maize and millet benefit
+#Total maize benefit with risk
+#cereal benefit millet_price
+  #cereal benefit with vv function
+cereal_revenue <- vv(cereal_benefit, 
                          CV_value, 
                          number_of_years, 
                          relative_trend = inflation_rate) 
 
-  # 
-  Turmeric_interv_result <- turmeric_revenue - total_cost
-  
-    #
-  #The cost and benefit of existing cropping system maize and millet
-  #Cereal maize and millet benefit
- #Total maize benefit with risk
-  Total_maize_yield <- maize_harvest * (1-maize_risk * yield_maize_risk)
-  maize_benefit <- Total_maize_yield * maize_price
-  
-  #Total animal feed benefit of millet straw and maize stem after harvesting maize and millet with risk
-  Total_animalfeed_yield <- animalfeed_harvest * (1-maize_risk * yield_maize_risk)
-  animalfeed_benefit <- Total_animalfeed_yield * animalfeed_price 
-  
-  
-  #Total firewood benefit as remaining part of  maize after extraction of maize grain(cob) is used for firewood benefit
-  Total_firewood_yield <- firewood_harvest * (1-maize_risk * yield_maize_risk)
-  firewood_benefit <- firewood_harvest * firewood_price
-  
-  #Total millet benefit with risk
-  Total_millet_yield <- millet_harvest * (1-millet_risk * yield_millet_risk)
-  millet_benefit <- millet_harvest * millet_price
-  
-  #Total cereal benefit
-  cereal_benefit <- maize_benefit +
-    millet_benefit +
-    animalfeed_benefit + 
-    firewood_benefit
-  # Total cereal benefit with vv function
-  cereal_revenue <- vv(cereal_benefit, 
-                       CV_value, 
-                       number_of_years, 
-                       relative_trend = inflation_rate)
 
   #
+
   total_benefit_no <- cereal_revenue 
-  
-  # baseline costs 
-  cereal_annual_costs <- maize_production_cost +
-                         millet_production_cost +
-                         maize_processing_cost +
-                         millet_processing_cost
                      
-  # baseline costs with vv function
-  total_cost_no <- vv(cereal_annual_costs, 
-                      var_CV = CV_value, 
-                      n = number_of_years, 
-                      relative_trend = inflation_rate)  
+
   # subtract 
   
   no_intervention_result <- total_benefit_no - total_cost_no
@@ -212,7 +182,6 @@ communication_marketing_cost <-
     Turmeric_interv_result = NPV_interv,
     no_intervention_result = NPV_no_interv,
     NPV_decision = NPV_interv - NPV_no_interv,
-    total_costs = sum(total_cost),
     Cashflow_decision = Turmeric_interv_result))
   
 }

@@ -3,66 +3,73 @@ number_of_years,5,,5,const,Number of years for turmeric project simulation
 discount_rate,7.5,,9.5,posnorm,Discounting factor (%)
 CV_value,0.1,,0.4,posnorm,Coefficient of variation for our turmeric intervention (%)
 inflation_rate,6,,8,posnorm,Inflation rate (%)
-land_of_turmeric,13.8,,13.8,const,Total land utilised for turmeric production
-if_government_provide_subsidy,0.9,,0.95,tnorm_0_1,Chance of government providing land for establishing processing and storage centre(%)
-irrigation_establishment_cost,1123,,1498,posnorm,Total irrigation establishment cost (USD/year/ha)
-subsidy_cost_government_paid,0.5,,0.5,const,% subsidy provided by government for establishment of irrigation per year
-estabishment_cost,11245,,14994,posnorm,establishment cost of processing and storage center (USD/year/ha)
-land_cost_government_paid,0.2,,0.25,tnorm_0_1,%portion paid by government for establishment of storage and processing center
-if_government_provide_land,0.8,,0.95,tnorm_0_1,Chance of government providing land for establishing processing and storage centre(%)
-land_rent_cost,187,,225,posnorm,Cost of land rent for esablishing processing center (USD/year/ha)
-advertisement_cost,450,,550,posnorm,Fund required to advance the projects (USD/year/ha)
-guidance_report_preparation_cost,300,,400,posnorm,Fund required to write the guidance report (USD/year/ha)
-branding_cost,370,,470,posnorm,Branding and registration cost (USD/year/ha)
-vehicle_cost,12738,,15000,posnorm,Costs of buying farm vehicle (USD/year/ha)
-Connection_negotiation_cost,225,,375,posnorm,Travel and seminar cost for creating connection and negotiation with local processor(USD/year/ha)
-training_cost,225,,375,posnorm,Cost occurred during the training (USD/year/ha)
-meeting_cost,500,,600,posnorm,Cost occurred during the meeting (USD/year/ha)
-awareness_cost,300,,400,posnorm,Cost occurred during the formation of cooperative (USD/year/ha)
-land_acquisition_cost,100,,200,posnorm,Cost of pooling of land for increasing the resource use efficiency(USD/year/ha)
-turning_land_suitable_for_cultivation_cost,524,,674,posnorm,Cost of turning the land suitable to sow the seeds for production(USD/year/ha)
-production_input,1738,,2000,posnorm,Cost of tillers and other material required for production and planting (USD/year/ha)
-depreciation_cost,65,,80,posnorm,depreciation cost (USD/year/ha)
-formation_cooperative_cost,100,,120,posnorm,Cost occurred during the formation of cooperative (USD/year/ha)
-end_Report_preparation_cost,140,,160,posnorm,report preparation cost (USD/year)
-organicmatter_fertiliser_women,28,,36,posnorm,organic matter and fertiliser cost  (USD/year/ha)
-Land_preparation_women,30,,41,posnorm,land preparation cost (USD/year/ha)
-Farmyard_manure_application_women,108,,153,posnorm,FYM collection and application cost  (USD/year/ha)
-Mulch_collection_women,108,,153,posnorm,mulch collection for women (USD/year/ha)
-Plantation_cost_women,13.5,,19.1,posnorm,Plantation cost for women (USD/year/ha)
-Weeding_cost_women,45,,63.7,posnorm,Weeding cost for women  (USD/year/ha)
-Harvesting_women,45,,63.7,posnorm,harvesting cost for women  (USD/year/ha)
-fuel_boiling_women,19,,28,posnorm,fuel cost for boiling raw turmeric (USD/year/ha)
-Cleaning_and_grading_women,27,,38.2,posnorm,Cleaning and grading cost for women (USD/year/ha)
-Processing_boiling_women,58.4,,82.8,posnorm,Processing and boiling cost for women (USD/year/ha)
-Drying_women,40.4,,57.3,posnorm,Drying cost for women  (USD/year/ha)
-Primary_processing_women,187,,200,posnorm,Transportation cost for women for primary processing (USD/year/ha)
-Secondary_processing_women,374,,400,posnorm,Secondary processing cost for women (USD/year/ha)
-Transportation_cost_women_distribution,374,,400,posnorm,Transportation   cost  for  distribution (USD/year/ha)
-Storage_cost_women,75,,120,posnorm,Storage cost for women of raw turmeric  (USD/year/ha)
-Packaging_cost_women,150,,225,posnorm,Packaging cost for women  (USD/year/ha)
-Marketing_cost_women,37,,45,posnorm,Marketing cost for women for selling (USD/year/ha)
-Administration_operation_cost_women,112,,180,posnorm,Administrative cost for women  (USD/year/ha)
-turmeric_risk,0.8,,0.95,tnorm_0_1,chance of turmeric risk per year 
-yield_turmeric_risk,0.05,,0.1,tnorm_0_1,% yield loss due to turmeric risk per year 
-Turmeric_price,2.48,,7.64,posnorm,Price of turmeric per kg (USD)
-recovery_rate,0.27,,0.32,tnorm_0_1,recovery rate of raw turmeric  to powder in %
-maize_harvest,1110,,1230,posnorm,maize harvest kg per hectar per year
-maize_risk,0.5,,0.7,tnorm_0_1,chance of occuring maize risk % per year
-yield_maize_risk,0.4,,0.6,tnorm_0_1,yield reduction due to maize risk % per year
-animalfeed_price,0.0075,,0.02,posnorm,Price of animal feed per kg (USD)
-maize_price,0.2,,0.3,posnorm,"Price of maize per kg (USD) 		"
-firewood_price,0.023,,0.03,posnorm,"Price of firewood per kg (USD) 		"
-millet_price,0.2,,0.3,posnorm,Price of millet per kg (USD)
-animalfeed_harvest,22000,,35000,posnorm,animalfeed harvest kg per hectar per year
-firewood_harvest,1500,,2500,posnorm,firewood harvest kg per hectar per year
-millet_harvest,1110,,1230,posnorm,millet harvest kg per hectar per yeart
-millet_risk,0.5,,0.7,tnorm_0_1,chances of millet risk % per year
-yield_millet_risk,0.4,,0.7,tnorm_0_1,yield reduction due to millet risk % per year
-maize_production_cost,410,,440,posnorm,Production cost of maize in (USD/year/ha)
-millet_production_cost,160,,185,posnorm,Production cost of maize(USD/year/ha)
-maize_processing_cost,41,,57,posnorm,Processing cost of maize for give production (USD/year/ha)
-millet_processing_cost,41,,58,posnorm,Processing cost of millet for given production (USD/year/ha)
+TURMERIC_IMPLEMENTATION_COST,0,,0,const,turmeric implementation cost(USD/year/ha)
+Seed_turmeric,225,,375,posnorm,turmeric implementation cost(USD/year/ha)
+Land_preparation_cost_turmeric,30,,41,posnorm,land preparation cost (USD/ha)
+TURMERIC_MAINTENANCE_COST,0,,0,const,turmeric maintenance cost(USD/year/ha)
+FYM_cost_turmeric,28,,36,posnorm,organic matter and fertiliser cost  (USD/ha)
+Weeding_cost_turmeric,45,,63.7,posnorm,Weeding  cost  for  farmer  (USD/ha)
+Plantation_cost_turmeric,225,,375,posnorm,turmeric implementation cost(USD/year/ha)
+Mulch_collection_cost_turmeric,108,,153,posnorm,mulch collection for farmer(USD/ha)
+TURMERIC_HARVESTING_COST,0,,0,const,turmeric harvesting cost(USD/year/ha)
+Extracting_turmeric_costs,45,,63.7,posnorm,extracting turmeric  cost  for  farmer(USD/ha)
+Removing_roots_costs,45,,63.7,posnorm,removing   cost  for   farmer  (USD/ha)
+sorting_seed_costs,45,,63.7,posnorm,sorting  cost  for   farmer  (USD/ha)
+gathering_costs,45,,63.7,posnorm,gathering  cost  for  farmer  (USD/ha)
+TURMERIC_POSTHARVESTING_COSTS,0,,0,const,turmeric postharvest cost(USD/year/ha)
+boiling_costs_turmeric,19,,28,posnorm,fuel cost for boiling raw turmeric (USD/ha)
+drying_costs_turmeric,40.4,,57.3,posnorm,Drying  cost  for   farmer  (USD/ha)
+grinding_costs_turmeric,27,,38.2,posnorm,Grinding  cost  for   farmer  (USD/ha)
+packaging_costs_turmeric,73.4,,96.6,posnorm,Packaging cost  for   farmer  (USD/ha)
+storage_costs_turmeric,75,,120,posnorm,Storage  cost  for   farmer  (USD/ha)
+TURMERIC_BENEFIT,0,,0,const,turmeric benefit(USD/year/ha)
+Turmeric_price,2.63,,3.15,posnorm,Price of turmeric per kg (USD) 
 Total_turmeric_yield,11430,,13170,posnorm,Total turmeric yield in kg per ha per year
-market_risk,0.3,,0.5,tnorm_0_1,chance of market risk % per year
-price_market_risk,0.15,,0.4,tnorm_0_1,% price reduce due to market risk per year 
+Improve_livelihood,225,,375,posnorm,Value of impoved livelihood(USD/year/ha)
+TURMERIC_RISK,0,,0,const,turmeric risk%
+extream_climatic_events_turmeric,0.3,,0.5,tnorm_0_1,"chance of extreme climate events % per year			"
+yield_climate_risk_turmeric,0.05,,0.1,tnorm_0_1,"yield reduction due to extreme climate event risk % per year			"
+disease_pests_turmeric,0.3,,0.5,tnorm_0_1,"chances of disease pests risk % per year			"
+yield_disease_risk_turmeric,0.05,,0.1,tnorm_0_1,"yield reduction due to disease pest risk % per year			"
+market_access_risk,0.3,,0.5,tnorm_0_1,chance of market access risk % per year
+price_market_access_risk,0.15,,0.4,tnorm_0_1, price reduce due to market access risk % per year 
+CEREAL_IMPLEMENTATION_COST,0,,0,const,cereal implementation cost(USD/year/ha)
+Seed_cereal,200,,210,posnorm,seed  cost(USD/year/ha)
+Land_preparation_cost_cereal,50,,375,posnorm,land preparation cost(USD/year/ha)
+CEREAL_MAINTENANCE_COST,0,,0,const,cereal maintenance cost(USD/year/ha)
+FYM_cost_cereal,30,,41,posnorm,FYM collection and application cost  (USD/year/ha)
+Weeding_cost_cereal,108,,153,posnorm,weeding collection and application cost  (USD/year/ha)
+Plantation_cost_cereal,108,,153,posnorm,mulch collection for women (USD/year/ha)
+CEREAL_HARVESTING_COST,0,,0,const,cereal harvesting cost(USD/year/ha)
+cutting_cereal_costs,45,,63.7,posnorm,cutting cereal cost for farmer  (USD/year/ha)
+shellling_thresing_cereal_costs,19,,28,posnorm,maize shelling and millet thresing cost for farmer (USD/year/ha)
+CEREAL_POSTHARVESTING_COSTS,0,,0,const,cereal post harvesting cost(USD/year/ha)
+cleaning_costs_cereal,45,,63.7,posnorm,Cleaning cost for cereal (USD/year/ha)
+storage_costs_cereal,19,,28,posnorm,Storage cost for cereal (USD/year/ha)
+MAIZE_BENEFIT,0,,0,const,Maize benefit (USD/year/ha)
+maize_harvest,1110,,1230,posnorm,maize harvest kg per hectar per year
+maize_price,0.2,,0.3,posnorm,"Price of maize per kg (USD) 		"
+maizestem_price,0.0075,,0.02,posnorm,Price of maizestem per kg (USD)  
+maizestem_harvest ,11000,,15000,posnorm,animalfeed harvest kg per hectar per year
+firewood_harvest,1500,,2500,posnorm,firewood harvest kg per hectar per year
+firewood_price,0.023,,0.03,posnorm,"Price of firewood per kg (USD) 		"
+MAIZE_RISK,0,,0,const,turmeric implementation cost(USD/year/ha)
+extream_climatic_events_maize,0.3,,0.5,tnorm_0_1,"chance of extreme climate events for maize % per year			"
+yield_climate_maize_risk,0.27,,0.32,tnorm_0_1,"yield reduction due to extreme climate event risk in maize  % per year			"
+disease_pests_maize_risk ,0.3,,0.5,tnorm_0_1,"chance of disease pest risk for maize % per year			"
+ yield_disease_pest_maize_risk ,0.2,,0.35,tnorm_0_1,yield reduction due to disease pest risk % per year
+wild_animal_attack_maize,0.4,,0.6,tnorm_0_1,"chance of wild animal risk for maize % per year			"
+yield_wild_animal_maize_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal risk % per year
+MILLET_RISK,0,,0,const,turmeric implementation cost(USD/year/ha)
+disease_pests_millet_risk ,0.3,,0.5,tnorm_0_1,"chance of wild animal risk for maize % per year	"
+ yield_disease_pest_millet_risk,0.27,,0.32,tnorm_0_1,yield reduction due to maize risk % per year
+  extream_climatic_events_millet ,0.3,,0.5,tnorm_0_1,"chance of wild animal risk for maize % per year	"
+yield_climate_millet_risk,0.2,,0.35,tnorm_0_1,"yield reduction due to  climate risk for millet % per year	"
+wild_animal_attack_millet,0.4,,0.6,tnorm_0_1,chance of wild animal risk for millet  % per year
+yield_wild_animal_millet_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal  risk in millet % per year
+MILLET_BENEFIT,0,,0,const,millet benefit (USD/year/ha)
+millet_price,0.2,,0.3,posnorm,Price of millet per kg (USD)
+millet_harvest,1110,,1230,posnorm,millet harvest (kg per hectar per year)
+food_access,112,,180,posnorm,food access value for farmer due to cereal cultivation  (USD/year/ha)
+milletstraw_harvest ,11000,,15000,posnorm,millet straw harvest kg per hectar per year
+milletstraw_price,0.0075,,0.02,posnorm,Price of milletstraw per kg (USD)  
