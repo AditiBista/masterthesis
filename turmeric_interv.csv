@@ -33,17 +33,17 @@ disease_pests_turmeric,0.3,,0.5,tnorm_0_1,"chances of disease pests risk % per y
 yield_disease_risk_turmeric,0.05,,0.1,tnorm_0_1,"yield reduction due to disease pest risk % per year			"
 market_access_risk,0.3,,0.5,tnorm_0_1,chance of market access risk % per year
 price_market_access_risk,0.15,,0.4,tnorm_0_1, price reduce due to market access risk % per year 
-CEREAL_IMPLEMENTATION_COST,0,,0,const,cereal implementation cost(USD/year/ha)
+MAIZE_IMPLEMENTATION_COST,0,,0,const,cereal implementation cost(USD/year/ha)
 Seed_cereal,200,,210,posnorm,seed  cost(USD/year/ha)
 Land_preparation_cost_cereal,50,,375,posnorm,land preparation cost(USD/year/ha)
-CEREAL_MAINTENANCE_COST,0,,0,const,cereal maintenance cost(USD/year/ha)
+MAIZE_MAINTENANCE_COST,0,,0,const,cereal maintenance cost(USD/year/ha)
 FYM_cost_cereal,30,,41,posnorm,FYM collection and application cost  (USD/year/ha)
 Weeding_cost_cereal,108,,153,posnorm,weeding collection and application cost  (USD/year/ha)
 Plantation_cost_cereal,108,,153,posnorm,mulch collection for women (USD/year/ha)
-CEREAL_HARVESTING_COST,0,,0,const,cereal harvesting cost(USD/year/ha)
+MAIZE_HARVESTING_COST,0,,0,const,cereal harvesting cost(USD/year/ha)
 cutting_cereal_costs,45,,63.7,posnorm,cutting cereal cost for farmer  (USD/year/ha)
 shellling_thresing_cereal_costs,19,,28,posnorm,maize shelling and millet thresing cost for farmer (USD/year/ha)
-CEREAL_POSTHARVESTING_COSTS,0,,0,const,cereal post harvesting cost(USD/year/ha)
+MAIZE_POSTHARVESTING_COSTS,0,,0,const,cereal post harvesting cost(USD/year/ha)
 cleaning_costs_cereal,45,,63.7,posnorm,Cleaning cost for cereal (USD/year/ha)
 storage_costs_cereal,19,,28,posnorm,Storage cost for cereal (USD/year/ha)
 MAIZE_BENEFIT,0,,0,const,Maize benefit (USD/year/ha)
@@ -77,3 +77,16 @@ milletculm_harvest ,11000,,15000,posnorm,millet straw harvest kg per hectar per 
 milletculm_price,0.0075,,0.02,posnorm,Price of milletstraw per kg (USD)Ê 
 wild_animal_attack_millet_culm  ,0.4,,0.6,tnorm_0_1,chance of wild animal risk for milletculm  % per year
 yield_wild_animal_millet_culm_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal  risk in milletculm % per year
+MILLET_IMPLEMENTATION_COST,0,,0,const,cereal implementation cost(USD/year/ha)
+Seed_millet,200,,210,posnorm,seed  cost(USD/year/ha)
+Land_preparation_cost_millet,50,,375,posnorm,land preparation cost(USD/year/ha)
+MILLET_MAINTENANCE_COST,0,,0,const,cereal maintenance cost(USD/year/ha)
+FYM_cost_millet,30,,41,posnorm,FYM collection and application cost  (USD/year/ha)
+Weeding_cost_millet,108,,153,posnorm,weeding collection and application cost  (USD/year/ha)
+Plantation_cost_millet,108,,153,posnorm,mulch collection for women (USD/year/ha)
+MILLET_HARVESTING_COST,0,,0,const,cereal harvesting cost(USD/year/ha)
+cutting_millet_costs,45,,63.7,posnorm,cutting cereal cost for farmer  (USD/year/ha)
+shellling_thresing_millet_costs,19,,28,posnorm,maize shelling and millet thresing cost for farmer (USD/year/ha)
+MILLET_POSTHARVESTING_COSTS,0,,0,const,cereal post harvesting cost(USD/year/ha)
+cleaning_costs_millet,45,,63.7,posnorm,Cleaning cost for cereal (USD/year/ha)
+storage_costs_millet,19,,28,posnorm,Storage cost for cereal (USD/year/ha)
