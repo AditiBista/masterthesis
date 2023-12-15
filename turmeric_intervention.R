@@ -117,19 +117,21 @@ Total_maize_yield <- maize_harvest *
                     (1-extream_climatic_events_maize * yield_climate_maize_risk) *
                     (1-wild_animal_attack_maize * yield_wild_animal_maize_risk)
 maize_benefit <- maize_price * Total_maize_yield 
-#millet benefit
-Total_millet_yield <- millet_harvest *                                                                                                                                
-                    (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
-                    (1-extream_climatic_events_millet * yield_climate_millet_risk) *
-                    (1-wild_animal_attack_millet * yield_wild_animal_millet_risk)
-millet_benefit <- Total_millet_yield * millet_price
 
 #Total maize stalk used as feed   for animal
 Total_maizestalk_yield <- maizestalk_harvest * 
                          (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
-                         (1-extream_climatic_events_maize * yield_climate_maize_risk) 
+                         (1-extream_climatic_events_maize * yield_climate_maize_risk) *
+                         (1-wild_animal_attack_maize_stalk * yield_wild_animal_maize_stalk_risk)
                         
 maizestalk_benefit <- Total_maizestem_yield * maizestem_price 
+
+#millet benefit
+Total_millet_yield <- millet_harvest *                                                                                                                                
+  (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
+  (1-extream_climatic_events_millet * yield_climate_millet_risk) *
+  (1-wild_animal_attack_millet * yield_wild_animal_millet_risk)
+millet_benefit <- Total_millet_yield * millet_price
 
 #millet straw benefit
 Total_milletculm_yield <- milletculm_harvest * 

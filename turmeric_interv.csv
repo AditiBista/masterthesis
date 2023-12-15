@@ -49,8 +49,8 @@ storage_costs_cereal,19,,28,posnorm,Storage cost for cereal (USD/year/ha)
 MAIZE_BENEFIT,0,,0,const,Maize benefit (USD/year/ha)
 maize_harvest,1110,,1230,posnorm,maize harvest kg per hectar per year
 maize_price,0.2,,0.3,posnorm,"Price of maize per kg (USD) 		"
-maizestem_price,0.0075,,0.02,posnorm,Price of maizestem per kg (USD)Ê 
-maizestem_harvest ,11000,,15000,posnorm,animalfeed harvest kg per hectar per year
+maizestalk_price,0.0075,,0.02,posnorm,Price of maizestem per kg (USD)Ê 
+maizestalk_harvest ,11000,,15000,posnorm,animalfeed harvest kg per hectar per year
 firewood_harvest,1500,,2500,posnorm,firewood harvest kg per hectar per year
 firewood_price,0.023,,0.03,posnorm,"Price of firewood per kg (USD) 		"
 MAIZE_RISK,0,,0,const,turmeric implementation cost(USD/year/ha)
@@ -60,6 +60,8 @@ disease_pests_maize_risk ,0.3,,0.5,tnorm_0_1,"chance of disease pest risk for ma
  yield_disease_pest_maize_risk ,0.2,,0.35,tnorm_0_1,yield reduction due to disease pest risk % per year
 wild_animal_attack_maize,0.4,,0.6,tnorm_0_1,"chance of wild animal risk for maize % per year			"
 yield_wild_animal_maize_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal risk % per year
+wild_animal_attack_maize_stalk ,0.4,,0.6,tnorm_0_1,chance of wild animal risk for maizestalk  % per year
+yield_wild_animal_maize_stalk_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal  risk in maize stalk % per year
 MILLET_RISK,0,,0,const,turmeric implementation cost(USD/year/ha)
 disease_pests_millet_risk ,0.3,,0.5,tnorm_0_1,"chance of wild animal risk for maize % per year	"
  yield_disease_pest_millet_risk,0.27,,0.32,tnorm_0_1,yield reduction due to maize risk % per year
@@ -71,5 +73,7 @@ MILLET_BENEFIT,0,,0,const,millet benefit (USD/year/ha)
 millet_price,0.2,,0.3,posnorm,Price of millet per kg (USD)
 millet_harvest,1110,,1230,posnorm,millet harvest (kg per hectar per year)
 food_access,112,,180,posnorm,food access value for farmer due to cereal cultivation  (USD/year/ha)
-milletstraw_harvest ,11000,,15000,posnorm,millet straw harvest kg per hectar per year
-milletstraw_price,0.0075,,0.02,posnorm,Price of milletstraw per kg (USD)Ê 
+milletculm_harvest ,11000,,15000,posnorm,millet straw harvest kg per hectar per year
+milletculm_price,0.0075,,0.02,posnorm,Price of milletstraw per kg (USD)Ê 
+wild_animal_attack_millet_culm  ,0.4,,0.6,tnorm_0_1,chance of wild animal risk for milletculm  % per year
+yield_wild_animal_millet_culm_risk,0.3,,0.55,tnorm_0_1,yield reduction due to wild animal  risk in milletculm % per year
