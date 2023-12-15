@@ -17,18 +17,18 @@ Turmeric_function <- function(x, varnames){
   #implementation cost for the turmeric farmer
   turmeric_implementation_costs <- 
   Land_preparation_cost_turmeric +
-   Seed_turmeric 
+  Seed_turmeric 
   
 # Maintenance costs for the turmeric farmer
   turmeric_maintenance_cost <- 
     FYM_cost_turmeric +
     Weeding_cost_turmeric+
     Plantation_cost_turmeric +
-  Mulch_collection_cost_turmeric
+    Mulch_collection_cost_turmeric
 
 #harvesting cost of turmeric farmer
  Turmeric_harvesting_cost <- 
-   Extracting_turmeric_costs +
+ Extracting_turmeric_costs +
  Removing_roots_costs +
  sorting_seed_costs +
  gathering_costs
@@ -112,36 +112,46 @@ total_cost_no <- total_cost_cereal + cereal_initial_cost
    
 
   #maize benefit
-Total_maize_yield <- maize_harvest * (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
-                  (1-extream_climatic_events_maize * yield_climate_maize_risk) *
-                  (1-wild_animal_attack_maize * yield_wild_animal_maize_risk)
+Total_maize_yield <- maize_harvest * 
+                    (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
+                    (1-extream_climatic_events_maize * yield_climate_maize_risk) *
+                    (1-wild_animal_attack_maize * yield_wild_animal_maize_risk)
 maize_benefit <- maize_price * Total_maize_yield 
 #millet benefit
-Total_millet_yield <- millet_harvest * (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
-  (1-extream_climatic_events_millet * yield_climate_millet_risk) *
-  (1-wild_animal_attack_millet * yield_wild_animal_millet_risk)
+Total_millet_yield <- millet_harvest *                                                                                                                                
+                    (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
+                    (1-extream_climatic_events_millet * yield_climate_millet_risk) *
+                    (1-wild_animal_attack_millet * yield_wild_animal_millet_risk)
 millet_benefit <- Total_millet_yield * millet_price
 
-#Total maizestem feed benefit for animal
-Total_maizestem_yield <- maizestem_harvest * (1-extream_climatic_events_maize * yield_climate_maize_risk) *
-  (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) 
-maizestem_benefit <- Total_maizestem_yield * maizestem_price 
+#Total maize stalk used as feed   for animal
+Total_maizestalk_yield <- maizestalk_harvest * 
+                         (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
+                         (1-extream_climatic_events_maize * yield_climate_maize_risk) 
+                        
+maizestalk_benefit <- Total_maizestem_yield * maizestem_price 
 
 #millet straw benefit
-Total_milletstraw_yield <- milletstraw_harvest * (1-extream_climatic_events_millet * yield_climate_millet_risk) *
-  (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) 
-milletstraw_benefit <- Total_milletstraw_yield * milletstraw_price 
+Total_milletculm_yield <- milletculm_harvest * 
+                           (1-extream_climatic_events_millet * yield_climate_millet_risk) *
+                           (1-disease_pests_millet_risk * yield_disease_pest_millet_risk) *
+                           (1-wild_animal_attack_millet_culm * yield_wild_animal_millet_culm_risk)
+                            
+milletculm_benefit <- Total_milletculm_yield * milletculm_price 
 
 #Total firewood benefit as remaining part of  maize after extraction of maize grain(cob) is used for firewood benefit
-Total_firewood_yield <- firewood_harvest * (1-maize_risk * yield_maize_risk)
-firewood_benefit <- firewood_harvest * firewood_price
+Total_firewood_yield <- firewood_harvest *
+                        (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
+                        (1-extream_climatic_events_maize * yield_climate_maize_risk) 
+
+firewood_benefit <- Total_firewood_yield* firewood_price
 
 #millet benefit
 cereal_benefit <- millet_benefit + 
                    food_access + 
                    maize_benefit +
-                   maizestem_benefit +
-                   milletstraw_benefit +
+                   maizestalk_benefit +
+                   milletculm_benefit +
                    firewood_benefit 
 #The cost and benefit of existing cropping system maize and millet
 #Cereal maize and millet benefit
