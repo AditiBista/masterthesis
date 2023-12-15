@@ -72,46 +72,76 @@ total_benefit <- vv(turmeric_revenue,
 
 # turmeric result
 Turmeric_interv_result <- total_benefit - total_cost
-#implementation cost for the cereal farmer, initial cost
-cereal_implementation_costs <- 
-Seed_cereal +
-Land_preparation_cost_cereal
+#implementation cost for the millet farmer, initial cost
 
-# Maintenance costs for the cereal farmer
-cereal_maintenance_cost <- 
-FYM_cost_cereal +
-Weeding_cost_cereal +
-Plantation_cost_cereal 
+#millet costs
+millet_implementation_costs <- 
+  Seed_millet +
+  Land_preparation_cost_millet
+
+# Maintenance costs for the millet farmer
+millet_maintenance_cost <- 
+  FYM_cost_millet +
+  Weeding_cost_millet +
+  broadcastingseed_cost_millet +
+thining_cost_millet +
+smoothing_cost_land_millet
 
 
-#harvesting cost of cereal
-cereal_harvesting_cost <- 
-cutting_cereal_costs +
-shellling_thresing_cereal_costs
+#harvesting cost of millet
+millet_harvesting_cost <- 
+  cutting_millet_costs +
+thresing_millet_costs
 
-#post harvesting cost of cereal
-cereal_postharvesting_cost <-   
-cleaning_costs_cereal +
-storage_costs_cereal
+#post harvesting cost of millet
+millet_postharvesting_cost <-   
+drying_costs_millet
+winnowing_costs_millet
+grinding_costs_millet
+storage_costs_millet
 
-#cereal initial cost
-cereal_initial_cost <- cereal_implementation_costs 
-#Total cost
-cereal_cost <- 
-cereal_maintenance_cost +  
-cereal_harvesting_cost + 
-cereal_postharvesting_cost 
+#millet initial cost
+millet_initial_cost <- millet_implementation_costs 
+#Total cost of millet
+millet_cost <- 
+  millet_maintenance_cost +  
+  millet_harvesting_cost + 
+  millet_postharvesting_cost 
 
 # baseline costs with vv function
-total_cost_cereal <- vv(cereal_cost, 
+total_cost_millet <- vv(millet_cost, 
                     var_CV = CV_value, 
                     n = number_of_years, 
                     relative_trend = inflation_rate)  
 #Total cost for cereal farmer  
-total_cost_no <- total_cost_cereal + cereal_initial_cost 
+total_cost_no <- total_cost_millet + millet_initial_cost 
    
 
-  #maize benefit
+## Maize total costs
+#MAIZE_IMPLEMENTATION_COST
+maize_implementation_costs <-     
+Seed_maize +
+Land_preparation_cost_maize
+#MAIZE_MAINTENANCE_COST
+maize_maintenance_cost <- FYM_cost_maize +
+Weeding_cost_maize +
+Plantation_cost_maize +
+#MAIZE_HARVESTING_COST
+  maize_harvesting_cost <- cutting_maize_costs +
+                          shellling_maize_costs
+#MAIZE_POSTHARVESTING_COSTS
+maize_postharvesting_cost <- winnowing_costs_maize +
+drying_costs_maize +
+grinding_costs_maize +
+storage_costs_maize
+##maize_initial_cost
+maize_initial_cost <- maize_implementation_costs
+#Total maize cost
+Total_maize_cost <- maize_initial_cost +
+  maize_maintenance_cost +
+  maize_harvesting_cost +
+  maize_postharvesting_cost
+#maize benefit
 Total_maize_yield <- maize_harvest * 
                     (1-disease_pests_maize_risk * yield_disease_pest_maize_risk) *
                     (1-extream_climatic_events_maize * yield_climate_maize_risk) *
