@@ -16,11 +16,15 @@ Turmeric_function <- function(x, varnames){
 ##cost  and benefit of turmeric 
   #implementation cost for the turmeric farmer
   turmeric_implementation_costs <- 
-  Land_preparation_cost_turmeric +
-  Seed_turmeric 
+  grinding_machine_turmeric +
+  packaging_machine_turmeric +
+    storage_drum_turmeric +
+    Solar_pannel_cost_turmeric
   
 # Maintenance costs for the turmeric farmer
   turmeric_maintenance_cost <- 
+    Land_preparation_cost_turmeric +
+    Seed_turmeric +
     FYM_cost_turmeric +
     Weeding_cost_turmeric+
     Plantation_cost_turmeric +
@@ -36,7 +40,8 @@ Turmeric_function <- function(x, varnames){
 #post harvesting cost of turmeric farmer
 Turmeric_postharvesting_cost <-   
 boiling_costs_turmeric +
-drying_costs_turmeric +
+transporation_costs_turmeric +
+cutting_drying_costs_turmeric +
 grinding_costs_turmeric +
 packaging_costs_turmeric +
 storage_costs_turmeric
@@ -78,17 +83,19 @@ Turmeric_interv_result <- total_benefit - total_cost
 #implementation cost for the millet farmer, initial cost
 
 millet_implementation_costs <- 
-  Seed_millet +
-  Land_preparation_cost_millet
+  grinding_machine_millet +
+  packaging_machine_millet + 
+  storage_drum_millet
 
 # Maintenance costs for the millet farmer
 millet_maintenance_cost <- 
+  nursery_preparation_cost +
+  Land_preparation_cost_millet +
+  Seed_millet + 	
   FYM_cost_millet +
   Weeding_cost_millet +
-  broadcastingseed_cost_millet +
-thining_cost_millet +
-smoothing_cost_land_millet
-
+  transplantation_cost_millet 
+  
 
 #harvesting cost of millet
 millet_harvesting_cost <- 
@@ -97,13 +104,16 @@ thresing_millet_costs
 
 #post harvesting cost of millet
 millet_postharvesting_cost <-   
-drying_costs_millet
-winnowing_costs_millet
-grinding_costs_millet
-storage_costs_millet
+drying_separation_costs_millet +
+winnowing_costs_millet +
+grinding_costs_millet +
+storage_costs_millet +
+packaging_costs_millet +
+transporation_costs_millet
 
 #millet initial cost
 millet_initial_cost <- millet_implementation_costs 
+
 #Total cost of millet
 millet_cost <- 
   millet_maintenance_cost +  
@@ -119,10 +129,12 @@ total_cost_millet <- vv(millet_cost,
 ## Maize  costs and benefit with risk 
 #MAIZE_IMPLEMENTATION_COST
 maize_implementation_costs <-     
-Seed_maize +
-Land_preparation_cost_maize
+storage_drum_maize
 #MAIZE_MAINTENANCE_COST
-maize_maintenance_cost <- FYM_cost_maize +
+maize_maintenance_cost <- Urea_cost_maize +
+                         Insecticides_cost_maize + 
+                         Seed_maize +
+                         FYM_cost_maize +
                          Weeding_cost_maize +
                          Plantation_cost_maize 
 #MAIZE_HARVESTING_COST
@@ -131,8 +143,8 @@ maize_maintenance_cost <- FYM_cost_maize +
 #MAIZE_POSTHARVESTING_COSTS
 maize_postharvesting_cost <- winnowing_costs_maize +
                              drying_costs_maize +
-                             grinding_costs_maize +
-                             storage_costs_maize
+                             grinding_costs_maize 
+                           
 ##maize_initial_cost
 maize_initial_cost <- maize_implementation_costs
 #Total maize cost
@@ -284,7 +296,6 @@ pls_result <- plsr.mcSimulation(object = mcSimulation_results,
 #
 input_table <- read.csv("turmeric_interv.csv")
 #
-
 plot_pls(pls_result, input_table = turmeric_interv, threshold = 0)
 #
 
