@@ -1,7 +1,7 @@
 variable,lower,median,upper,distribution,label
 number_of_years,10,,10,const,Number of years for turmeric project simulation
 discount_rate,7.5,,9.5,posnorm,Discounting factor (%)
-CV_value,0.1,,0.4,posnorm,Coefficient of variation for our turmeric intervention (%)
+CV_value,0.1,,0.4,posnorm,Coefficient of variation  (%)
 inflation_rate,6,,8,posnorm,Inflation rate (%)
 TURMERIC_IMPLEMENTATION_COST,0,,0,const,turmeric implementation cost(NPR/year/ropani)
 Seed_turmeric,8000,,12000,posnorm,Turmeric seed required (NPR/year/ropani)
@@ -33,6 +33,7 @@ Total_turmeric_yield,700,,800,posnorm,Total turmeric yield in kg per ropani per 
 turmeric_recovery_rate,0.33,,0.35,posnorm,Recovery rate of fresh turmeric to turmeric powder (%)
 Improve_livelihood,20000,,30000,posnorm,Value of impoved livelihood (NPR/year/ropani)
 TURMERIC_RISK,0,,0,const,turmeric risk %
+knowledge_gap_probability,0.1,,0.15,posnorm,% estimation of knowledge gaps to manage and yield the turmeric 
 extream_climatic_events_turmeric,0.3,,0.5,tnorm_0_1,"chance of extreme climate events % per year			"
 yield_climate_risk_turmeric,0.02,,0.05,tnorm_0_1,"yield reduction due to extreme climate event risk % per year			"
 disease_pests_turmeric,0.3,,0.5,tnorm_0_1,"chances of disease pests risk % per year			"

@@ -60,11 +60,17 @@ total_cost_turmeric <- vv(turmeric_cost,
                         relative_trend = inflation_rate) 
 #sum of total cost for turmeric farmer
 total_cost <- total_cost_turmeric + turmeric_initial_cost
+#Account for risk in diminished yield due to knowledge gaps especially at the initial phase i.e 2 years
+#and risk of knowledge gaps that could also lead to lower yields
+management_errors <- vv(var_mean = knowledge_gap_probability, var_CV = CV_value, n = number_of_years, 
+                        relative_trend = -2)
 # Benefit of turmeric
 #Turmeric yield with turmeric risk
 
-turmeric_yield <- Total_turmeric_yield * (1-extream_climatic_events_turmeric * yield_climate_risk_turmeric) *
-                  (1-disease_pests_turmeric * yield_disease_risk_turmeric)
+turmeric_yield <- Total_turmeric_yield * 
+                  (1-extream_climatic_events_turmeric * yield_climate_risk_turmeric) *
+                  (1-disease_pests_turmeric * yield_disease_risk_turmeric) * 
+                  (1-management_errors)
 ##Turmeric revenue by selling turmeric powder
 
 turmeric_revenue <- (turmeric_yield * Turmeric_price) +
